@@ -2,6 +2,7 @@ package org.example.ioc.overview.dependency.domain;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.context.ApplicationContext;
 
 import java.util.Collection;
 
@@ -17,7 +18,7 @@ public class UserRepository {
 
     private BeanFactory beanFactory;    //内建非 Bean 对象（依赖）
 
-    private ObjectFactory<User> userObjectFactory;
+    private ObjectFactory<ApplicationContext> userObjectFactory;    //容器内建 Bean
 
     public Collection<User> getUsers() {
         return users;
@@ -35,11 +36,11 @@ public class UserRepository {
         this.beanFactory = beanFactory;
     }
 
-    public ObjectFactory<User> getUserObjectFactory() {
+    public ObjectFactory<ApplicationContext> getUserObjectFactory() {
         return userObjectFactory;
     }
 
-    public void setUserObjectFactory(ObjectFactory<User> userObjectFactory) {
+    public void setUserObjectFactory(ObjectFactory<ApplicationContext> userObjectFactory) {
         this.userObjectFactory = userObjectFactory;
     }
 
