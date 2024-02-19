@@ -1,4 +1,4 @@
-package org.example.ioc.overview.dependency.domain;
+package org.example.ioc.overview.domain;
 
 /**
  * 用户类

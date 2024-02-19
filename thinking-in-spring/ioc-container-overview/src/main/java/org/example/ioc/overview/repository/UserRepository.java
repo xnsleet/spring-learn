@@ -1,5 +1,6 @@
-package org.example.ioc.overview.dependency.domain;
+package org.example.ioc.overview.repository;
 
+import org.example.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
