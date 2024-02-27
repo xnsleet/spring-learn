@@ -8,7 +8,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
     <import resource="dependency-lookup-context.xml"/>
 
-    <bean id="userRepository" class="org.example.ioc.overview.dependency.domain.UserRepository"
+    <bean id="userRepository" class="org.example.ioc.overview.repository.UserRepository"
           autowire="byType"><!-- Auto wiring -->
         <!-- 手动注入-->
         <!--        <property name="users">-->
