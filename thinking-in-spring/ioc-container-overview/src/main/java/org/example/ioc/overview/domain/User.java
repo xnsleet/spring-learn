@@ -45,4 +45,12 @@ public class User {
                 ", age=" + age +
                 '}';
     }
+
+    public static User  createUser(){
+        User user = new User();
+        user.setId(1L);
+        user.setName("sleet");
+        user.setAge(30);
+        return user;
+    }
 }
