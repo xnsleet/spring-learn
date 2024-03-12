@@ -5,6 +5,7 @@ import org.example.bean.factory.UserFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 /**
  * Bean 初始化 实现
@@ -22,13 +23,18 @@ public class BeanInitializationDemo {
         applicationContext.register(BeanInitializationDemo.class);
         // 启动容器
         applicationContext.refresh();
+        System.out.println("Spring 容器已启动。。。");
         // 依赖查找
         UserFactory userFactory = applicationContext.getBean(UserFactory.class);
+        System.out.println(userFactory);
+        System.out.println("Spring 容器准备关闭。。。");
         // 关闭容器
         applicationContext.close();
+        System.out.println("Spring 容器已关闭。。。");
     }
 
-    @Bean(initMethod = "initUserFactory")
+    @Bean(initMethod = "initUserFactory",destroyMethod = "doDestroy")
+    @Lazy
     public UserFactory getUserFactory(){
         return new DefaultUserFactory();
     }
