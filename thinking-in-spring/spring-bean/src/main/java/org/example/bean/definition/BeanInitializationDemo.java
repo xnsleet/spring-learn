@@ -5,7 +5,6 @@ import org.example.bean.factory.UserFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
 /**
  * Bean 初始化 实现
@@ -34,7 +33,7 @@ public class BeanInitializationDemo {
     }
 
     @Bean(initMethod = "initUserFactory",destroyMethod = "doDestroy")
-    @Lazy
+//    @Lazy
     public UserFactory getUserFactory(){
         return new DefaultUserFactory();
     }

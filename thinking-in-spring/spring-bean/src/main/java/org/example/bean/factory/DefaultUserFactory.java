@@ -2,6 +2,7 @@ package org.example.bean.factory;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.*;
 
@@ -42,4 +43,10 @@ public class DefaultUserFactory
     public void doDestroy(){
         System.out.println("自定义销毁方法 doDestroy() : UserFactory 销毁中。。。");
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("正在执行GC。。。");
+    }
+
 }
