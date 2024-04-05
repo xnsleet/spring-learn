@@ -1,6 +1,6 @@
 package org.example.ioc.overview.dependency.container;
 
-import org.example.ioc.overview.dependency.domain.User;
+import org.example.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.context.ApplicationContext;

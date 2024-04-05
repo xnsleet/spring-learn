@@ -1,4 +1,4 @@
-package org.example.sleet;
+package org.example;
 
 /**
  * @author sleet

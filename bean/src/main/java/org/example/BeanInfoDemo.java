@@ -1,4 +1,4 @@
-package org.example.sleet;
+package org.example;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
