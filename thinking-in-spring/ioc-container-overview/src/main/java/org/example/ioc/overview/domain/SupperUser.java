@@ -1,6 +1,6 @@
-package org.example.ioc.overview.dependency.domain;
+package org.example.ioc.overview.domain;
 
-import org.example.ioc.overview.dependency.annotation.Supper;
+import org.example.ioc.overview.annotation.Supper;
 
 /**
  * 超级用户

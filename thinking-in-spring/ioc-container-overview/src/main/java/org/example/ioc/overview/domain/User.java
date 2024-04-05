@@ -1,4 +1,4 @@
-package org.example.ioc.overview.dependency.domain;
+package org.example.ioc.overview.domain;
 
 /**
  * 用户类
@@ -44,5 +44,13 @@ public class User {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public static User  createUser(){
+        User user = new User();
+        user.setId(1L);
+        user.setName("sleet");
+        user.setAge(30);
+        return user;
     }
 }

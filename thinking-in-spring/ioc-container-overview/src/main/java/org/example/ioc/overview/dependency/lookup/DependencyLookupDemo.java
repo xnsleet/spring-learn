@@ -1,7 +1,7 @@
 package org.example.ioc.overview.dependency.lookup;
 
-import org.example.ioc.overview.dependency.annotation.Supper;
-import org.example.ioc.overview.dependency.domain.User;
+import org.example.ioc.overview.annotation.Supper;
+import org.example.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -41,7 +41,7 @@ public class DependencyLookupDemo {
         }
     }
 
-    private static void lookupCollectionByType(BeanFactory beanFactory) {
+    public static void lookupCollectionByType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
             Map<String, User> users = listableBeanFactory.getBeansOfType(User.class);

@@ -1,6 +1,6 @@
 package org.example.ioc.overview.dependency.injection;
 
-import org.example.ioc.overview.dependency.domain.UserRepository;
+import org.example.ioc.overview.repository.UserRepository;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
